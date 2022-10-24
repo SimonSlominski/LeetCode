@@ -28,17 +28,3 @@ class Solution:
                     break
 
         return "".join([a for a in _roman_num(num)])
-
-
-""" divmod() 
-1. Parameters
-number1 - numerator, can be an integer or a floating point number
-number2 - denominator, can be an integer or a floating point number
-
-2. The method returns:
-(quotient, remainder)
-"""
-
-if __name__ == "__main__":
-    x = Solution()
-    print(x.int_to_roman(3))
