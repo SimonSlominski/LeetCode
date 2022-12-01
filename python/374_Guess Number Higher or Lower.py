@@ -1,0 +1,28 @@
+# The guess API is already defined for you.
+# @param num, your guess
+# @return -1 if num is higher than the picked number
+#          1 if num is lower than the picked number
+#          otherwise return 0
+def guess(num):
+    pass
+
+
+class Solution(object):
+    def guessNumber(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+
+        left = 0
+        right = n
+
+        while (left <= right):
+            mid = (left + right) // 2
+            current_guess = guess(mid)
+            if current_guess == 0:
+                return mid
+            elif current_guess == -1:
+                right = mid - 1
+            else:
+                left = mid + 1
